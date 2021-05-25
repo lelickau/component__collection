@@ -1,0 +1,29 @@
+.block {
+    display: block;
+    min-height: 500px;
+    width: 100%;
+}
+
+#one {
+    background: #0e4f6b;
+}
+
+#two {
+    background: #6f42c1;
+}
+
+#tree {
+    background: #721c24;
+}
+
+#four {
+    background: #b1dfbb;
+}
+
+#five {
+    background: gold;
+}
+
+#six {
+    background: lightskyblue;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Tabs</title>
+</head>
+
+<body>
+    <!-- design (start) -->
+    <section class="section design" id="design">
+        <div class="container">
+            <div class="design-wrapper">
+                <div class="design-block">
+                    <!-- картинка фон. добавлять img с data-atribut: data-tabs-field="название для группы" + class="feature__img design-block__img hidden" -->
+                    <img src="img/car/image-5.png" alt="BMW X6" class="feature__img design-block__img"
+                        data-tabs-field="interior">
+                    <img src="img/car/image-4.png" alt="BMW X6" class="feature__img design-block__img hidden"
+                        data-tabs-field="body">
+                    <img src="img/car/image-5.png" alt="BMW X6" class="feature__img design-block__img hidden"
+                        data-tabs-field="three">
+                    <div class="design-text">
+                        <!-- Заголовок. добавлять h2 с data-atribut: data-tabs-field="название для группы" + class="section__title design__title hidden" -->
+                        <h2 class="section__title design__title" data-tabs-field="interior">
+                            Комфорт в деталях
+                        </h2>
+                        <h2 class="section__title design__title hidden" data-tabs-field="body">
+                            Притягивает взгляды
+                        </h2>
+                        <h2 class="section__title design__title" data-tabs-field="three">
+                            Комфорт в езде
+                        </h2>
+                        <ul class="design-list">
+                            <!-- Кнопки табы. добавлять [li button] с data-atribut: data-tabs-handler="название для группы" + class="design-list__item" -->
+                            <li>
+                                <button type="button" class="design-list__item design-list__item_active"
+                                    data-tabs-handler="interior">Дизайн салона</button>
+                            </li>
+                            <li>
+                                <button type="button" class="design-list__item" data-tabs-handler="body">Дизайн
+                                    кузова</button>
+                            </li>
+                            <li>
+                                <button type="button" class="design-list__item" data-tabs-handler="three">Дизайн
+                                    всего</button>
+                            </li>
+                        </ul>
+                        <!-- /.design-list -->
+                        <ul>
+                            <!-- Описание.  добавлять [[li p] [button]] с data-atribut: data-tabs-field="название для группы" + class="design__descr hidden" -->
+                            <li class="design__descr" data-tabs-field="interior">
+                                <p class="design__description-text">
+                                    Контурная подсветка в передних и задних дверях создает в салоне автомобиля уютную и
+                                    расслабляющую обстановку.
+                                    Хрустальные детали встроены в рукоятку рычага селектора, регулятор громкости.
+                                    Панорамная стеклянная крыша дарит ощущение невероятного простора днем, а в ночное
+                                    время создает в салоне особую атмосферу.
+                                </p>
+                                <button class="more">
+                                    — Узнать больше
+                                </button>
+                            </li>
+                            <li class="design__descr hidden" data-tabs-field="body">
+                                <p class="design__description-text">
+                                    Широкий. Динамичный. Мускулистый. Обновлённый BMW X6 сочетает в себе солиддность
+                                    серии X со спортивным купе. Решительная передняя часть с широкими воздухозаборниками
+                                    недвусмысленно намекает на то, какая мощь скрыта под капотом. Большая двойная
+                                    решётка радиатора спортивной формы подччёркивает атлетичность автомобиля. Усиливают
+                                    впечатление фирменные двойные фары BMW и широко раставленные противотуманные фары.
+                                </p>
+                                <button class="more">
+                                    — Узнать больше
+                                </button>
+                            </li>
+                            <li class="design__descr hidden" data-tabs-field="three">
+                                <p class="design__description-text">
+                                    Контурная подсветка в передних и задних дверях создает в салоне автомобиля уютную и
+                                    расслабляющую обстановку.
+
+                                </p>
+                                <button class="more">
+                                    — Узнать больше
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.design-text -->
+                </div>
+                <!-- /.design-block -->
+                <ul>
+                    <!-- Галерея.  добавлять [li img] с data-atribut: data-tabs-field="название для группы" + class="design-images hidden" -->
+                    <li class="design-images" data-tabs-field="interior">
+                        <img src="img/design/interior01.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/interior02.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/interior03.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/interior04.jpg" alt="BMW X6" class="design__img">
+                    </li>
+                    <li class="design-images hidden" data-tabs-field="body">
+                        <img src="img/design/body01.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/body02.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/body03.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/body04.jpg" alt="BMW X6" class="design__img">
+                    </li>
+                    <li class="design-images hidden" data-tabs-field="three">
+                        <img src="img/design/interior02.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/body04.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/interior04.jpg" alt="BMW X6" class="design__img">
+                        <img src="img/design/body03.jpg" alt="BMW X6" class="design__img">
+                    </li>
+                </ul>
+            </div>
+            <!-- /.design-wrapper -->
+        </div>
+    </section>
+    <!-- design (end) -->
+</body>
+
+</html>
