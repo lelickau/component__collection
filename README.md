@@ -5,13 +5,13 @@
 ```html
 <ul class="feature-list">
   <li class="feature__item">
-        <!--   ЗАГОЛОВОК СЕКЦИИ -->
+        <!--   ЗАГОЛОВОК СЕКЦИИ 1 (активная)-->
     <button type="button" class="feature__link feature__link_active">
       <div class="feature-item-wrap">
         <span class="feature-item__title"> ЗАГОЛОВОК СЕКЦИИ </span>
       </div>
     </button>
-        <!-- КОНТЕНТ -->
+        <!-- КОНТЕНТ (активный)-->
     <ul class="feature-sub">
       <li class="feature-sub__item">
         <span class="feature-sub__name">КОНТЕНТ </span>
@@ -26,7 +26,29 @@
         <span class="feature-sub__value">КОНТЕНТ</span>
       </li>
     </ul>
-
+  </li>
+  <li class="feature__item">
+        <!--   ЗАГОЛОВОК СЕКЦИИ (скрытая)-->
+    <button type="button" class="feature__link">
+      <div class="feature-item-wrap">
+        <span class="feature-item__title"> ЗАГОЛОВОК СЕКЦИИ </span>
+      </div>
+    </button>
+        <!-- КОНТЕНТ (скрытый)-->
+    <ul class="feature-sub hidden">
+      <li class="feature-sub__item">
+        <span class="feature-sub__name">КОНТЕНТ </span>
+        <span class="feature-sub__value">КОНТЕНТ </span>
+      </li>
+      <li class="feature-sub__item">
+        <span class="feature-sub__name">КОНТЕНТ </span>
+        <span class="feature-sub__value">КОНТЕНТ</span>
+      </li>
+      <li class="feature-sub__item">
+        <span class="feature-sub__name">КОНТЕНТ</span>
+        <span class="feature-sub__value">КОНТЕНТ</span>
+      </li>
+    </ul>
   </li>
 </ul>
 ```
