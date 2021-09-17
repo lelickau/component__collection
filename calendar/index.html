@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Календарь</title>
+</head>
+
+<body>
+    <div class="calendar__box">
+        <table id="calendar">
+        <thead>
+            <tr class="header">
+                <td>
+                    <div class="arr__left">
+                        <img src="icons/arrow-left-w.svg" alt="left arrow" class="arr__img">
+                    </div>
+                </td>
+                <td colspan="5" class="title"></td>
+                <td>
+                    <div class="arr__right">
+                        <img src="icons/arrow-right-w.svg" alt="right arrow" class="arr__img">
+                    </div>
+                </td>
+            </tr>
+            <tr class="week">
+                <td>Пн</td>
+                <td>Вт</td>
+                <td>Ср</td>
+                <td>Чт</td>
+                <td>Пт</td>
+                <td>Сб</td>
+                <td>Вс</td>
+            </tr>
+        <tbody>
+    </table>
+    <label class="calendar-label" for="calendar-day-start">С:
+        <input class="input__day-start" id="calendar-day-start" placeholder="Выберите дату" type="text" name="day-start">
+    </label>
+    <label class="calendar-label" for="calendar-day-end">До:
+        <input class="input__day-end" id="calendar-day-end" placeholder="Выберите дату" type="text" name="day-end">
+    </label>
+    </div>
+    <div class="date__box">
+        <div class="selected-date"></div>
+    </div>
+
+</body>
+
+</html>

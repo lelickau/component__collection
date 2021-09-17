@@ -1,0 +1,157 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+}
+
+th,
+td {
+  padding: 10px 15px;
+}
+
+input::placeholder {
+  font-family: "Comfortaa", cursive;
+}
+
+#calendar {
+  width: 100%;
+  text-align: center;
+}
+
+.calendar__box {
+  background-color: #3E4149;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  -webkit-box-shadow: 1px 1px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 1px 1px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 1px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.header {
+  height: 70px;
+  background-color: #444F5A;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.arr__left,
+.arr__right {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #323232;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.2);
+  transition: 1.7s all;
+}
+.arr__right:hover,
+.arr__left:hover {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 45, 133, 0.2);
+-moz-box-shadow: 0px 0px 15px 0px rgba(0, 45, 133, 0.2);
+box-shadow: 0px 0px 15px 0px rgba(0, 45, 133, 0.2);
+}
+
+.arr__right {
+  margin-left: auto;
+}
+
+.arr__img {
+  width: 100%;
+}
+
+.week {
+  height: 55px;
+}
+
+.week td {
+  font-size: 18px;
+  vertical-align: bottom;
+}
+
+.today {
+  background: #F73859;
+  border-radius: 50%;
+  color: #fff;
+}
+
+#calendar thead tr:last-child {
+  color: rgb(255, 255, 255);
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(255, 255, 255);
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+
+#calendar tbody td {
+  color: rgb(255, 255, 255);
+}
+
+#calendar tbody td:nth-child(n + 6),
+#calendar .holiday {
+  color: rgb(231, 140, 92);
+}
+
+.disactive {
+  cursor: not-allowed;
+}
+#calendar tbody td.disactive {
+  color: #697c88;
+}
+
+.future__day {
+  cursor: pointer;
+}
+
+.active__day {
+  background: #41b965;
+  color: #fff;
+}
+.active__day-start {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.active__day-end {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.active__day-interval {
+  background: rgba(3, 243, 191, 0.2);
+}
+
+.calendar-label {
+  color: #fff;
+  font-size: 16px;
+}
+
+.input__day-start, .input__day-end {
+  background-color:transparent;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+}
