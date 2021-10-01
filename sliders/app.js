@@ -9,39 +9,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.querySelector('.slider-container')
     const track = document.querySelector('.slider-track')
-    const items = document.querySelectorAll('.slider-item')
-    const itemsCount = items.length
-    const prev = document.querySelector('.btn-prev')
-    const next = document.querySelector('.btn-next')
+    const slides = document.querySelectorAll('.slider-item')
+    const slidesCount = slides.length
+    const prevBtn = document.querySelector('.btn-prev')
+    const nextBtn = document.querySelector('.btn-next')
 
+    // ширина одного слайда, в зависимости от кол-ва показа слайдов
     const itemWidth = container.clientWidth / slidesToShow
+    // длина скролла слайдов
     let movePosition = slidesToScroll * itemWidth
 
-    const setPosition = () => {
-        track.style.transform = `translate(${position}px)`
-    }
+    /**
+     * "Перелистывание" слайдов
+     */
+    const setPosition = () => track.style.transform = `translate(${position}px)`
 
+    /**
+     * Ф-ция блокировки кнопок
+     */
     const checkBtn = () => {
-        prev.disabled = position === 0
-        next.disabled = position <= -(itemsCount - slidesToShow) * itemWidth
+        prevBtn.disabled = position === 0
+        nextBtn.disabled = position <= -(slidesCount - slidesToShow) * itemWidth
     }
 
-    items.forEach(elem => {
-        elem.style.minWidth = `${itemWidth}px`
-    })
+    // минимальная ширина каждого слайда
+    slides.forEach(elem => elem.style.minWidth = `${itemWidth}px`)
 
-    prev.addEventListener('click', () => {
-        const itemsRight = Math.abs(position) / itemWidth
-        position += itemsRight >= slidesToScroll ? movePosition : itemsRight * itemWidth
+    /**
+     * Перелистывать назад или блокировать книпку, если нет слайдов
+     */
+    const toLeafPrev = () => {
+        const slidesRight = Math.abs(position) / itemWidth
+        position += slidesRight >= slidesToScroll ? movePosition : slidesRight * itemWidth
         setPosition()
         checkBtn()
-    })
-    next.addEventListener('click', () => {
-        const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth
-        position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth
+    }
+
+    /**
+     * Перелистывать вперед или блокировать книпку, если нет слайдов
+     */
+    const toLeafNext = () => {
+        const slidesLeft = slidesCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth
+        position -= slidesLeft >= slidesToScroll ? movePosition : slidesLeft * itemWidth
         setPosition()
         checkBtn()
-    })
+    }
+    prevBtn.addEventListener('click', toLeafPrev)
+    nextBtn.addEventListener('click', toLeafNext)
 
     checkBtn()
 
