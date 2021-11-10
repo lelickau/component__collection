@@ -1,12 +1,3 @@
-// Main script
-// const openMenu = (e) => {
-//     e.preventDefault();
-//     menuBtn.classList.toggle('menu__btn--active')
-// }
-
-// const menuBtn = document.querySelector('.menu__btn')
-// menuBtn.addEventListener('click', openMenu)
-//
 
 // Variant 1
 

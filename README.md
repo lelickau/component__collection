@@ -84,6 +84,8 @@ featureLinkElems.forEach((btn, index) => {
     })
 ```
 ### menu
+
+#### Анимированные мобильные меню
 - Variant 1
 ![Variant 1](https://github.com/lelickau/component__collection/blob/main/menu/CSS_Burger_Menu_Btns/img/fromTopToBottom.png)
 - Variant 2

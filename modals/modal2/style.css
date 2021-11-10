@@ -1,0 +1,72 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  overflow: auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.modal__container {
+  background-color: white;
+  position: relative;
+  width: 400px;
+  margin: 50px auto;
+  -webkit-transform: perspective(400px) translateY(100%) rotateX(-45deg);
+          transform: perspective(400px) translateY(100%) rotateX(-45deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.modal__header {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 2em;
+}
+
+.modal__body {
+  padding: 1em;
+}
+
+.modal__buttonbar {
+  margin: 1em 0 0;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.visible .modal__container {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body.modal__visible {
+  overflow: hidden;
+}
+
+.content_for_modal {
+  visibility: hidden;
+}
+
+@media (max-width: 680px) {
+  .modal__container {
+    width: 100%;
+  }
+}
