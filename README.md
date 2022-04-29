@@ -1,7 +1,7 @@
 ### calendar
-
-[Demo]()
-![calendar]()
+###### Only JavaScript Date methods
+[Demo](https://codepen.io/lelickau/pen/RwQbqZq)
+![calendar](https://github.com/lelickau/component__collection/blob/main/js/calendar/prev.png)
 
 ---
 
