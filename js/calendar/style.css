@@ -53,6 +53,7 @@ input::placeholder {
 
 .arr__left,
 .arr__right {
+  position: relative;
   padding: 5px;
   width: 30px;
   height: 30px;
@@ -74,8 +75,38 @@ box-shadow: 0px 0px 15px 0px rgba(0, 45, 133, 0.2);
   margin-left: auto;
 }
 
-.arr__img {
-  width: 100%;
+.arr__prev-ico::after,
+.arr__next-ico::after,
+.arr__prev-ico::before,
+.arr__next-ico::before {
+  position: absolute;
+  content: '';
+  background-color: #fff;
+  width: 13px;
+  height: 3px;
+}
+
+.arr__prev-ico::after {
+  top: 22px;
+  right: 16px;
+  transform: rotate(45deg);
+}
+
+.arr__next-ico::after {
+  top: 22px;
+  left: 16px;
+  transform: rotate(-45deg);
+}
+.arr__prev-ico::before {
+  top: 15px;
+  right: 16px;
+  transform: rotate(-45deg);
+}
+
+.arr__next-ico::before {
+  top: 15px;
+  left: 16px;
+  transform: rotate(45deg);
 }
 
 .week {

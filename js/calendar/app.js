@@ -75,6 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // ms конечная дата
         let dayEnd = 0;
 
+        const resetStylesDay = (elem) => {
+            elem.classList.remove('active__day')
+            elem.classList.remove('active__day-end')
+            elem.classList.remove('active__day-interval')
+            elem.classList.remove('active__day-start')
+        }
+
         // выбор даты событие
         document.querySelectorAll('.future__day').forEach((day) => {
             day.addEventListener('click', (e) => {
@@ -142,8 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (selectDate == 2) {
                     // сбросс счетчика и очистка календаря от активных(выбраных) дат
                     document.querySelectorAll('.future__day').forEach((item) => {
-                        item.classList.remove('active__day');
-                        item.classList.remove('active__day-interval');
+                        resetStylesDay(item);
                     });
                     resetInputValue('.input__day-start');
                     resetInputValue('.input__day-end');
