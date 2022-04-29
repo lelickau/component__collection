@@ -1,13 +1,13 @@
 ### carousel
 
-![V1]()
+![V1](https://github.com/lelickau/component__collection/blob/main/js/gallery/carousel.png)
 
 ---
 ### accordion
 - V1
-![V1]()
+![V1](https://github.com/lelickau/component__collection/blob/main/js/accordions/v1_onlyOneTabOpen/prev.png)
 - V2
-![V2]()
+![V2](https://github.com/lelickau/component__collection/blob/main/js/accordions/v2_onlyOneTabOpen/prev.png)
 
 ---
 #### mobile menu
