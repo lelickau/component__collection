@@ -1,0 +1,184 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* section wrapper carousel */
+.item {
+    margin-right: 25px;
+}
+
+/* btn open */
+.carousel__open {
+    cursor: pointer;
+    padding: 50px 35px;
+    border: none;
+    background-color: rgb(92, 216, 216);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* carousel main box */
+.carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(29, 35, 58, 0.849);
+}
+
+/* slide */
+.carousel__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+}
+
+.carousel__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__item.active {
+    opacity: 1;
+    z-index: 99;
+    box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.carousel__item.prev {
+    width: 45%;
+    opacity: 0.75;
+    transform: translate(-125%, -50%);
+}
+
+.carousel__item.next {
+    width: 45%;
+    opacity: 0.75;
+    transform: translate(25%, -50%);
+}
+
+/* box next/prev btns */
+.carousel__button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    z-index: 100;
+}
+
+.carousel__button {
+    cursor: pointer;
+    position: relative;
+    opacity: 0.75;
+    transition: all 300ms ease-in-out;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 50%;
+}
+
+.carousel__button-prev {
+    float: left;
+}
+
+.carousel__button-prev::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    top: 19px;
+    right: 19px;
+}
+
+.carousel__button-prev::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    top: 28px;
+    right: 19px;
+}
+
+.carousel__button-next {
+    float: right;
+}
+
+.carousel__button-next::before {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    top: 19px;
+    left: 19px;
+}
+
+.carousel__button-next::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 3px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 19px;
+}
+
+.carousel__close-btn {
+    float: right;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.carousel__close-btn::before {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 3px;
+    border-radius: 25px;
+    transform: rotate(45deg);
+    top: 20px;
+    left: 6px;
+    background-color: rgb(255, 88, 88);
+}
+
+.carousel__close-btn::after {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 3px;
+    border-radius: 25px;
+    transform: rotate(-45deg);
+    top: 20px;
+    left: 6px;
+    background-color: rgb(255, 88, 88);
+}
+
+.carousel__button:hover {
+    opacity: 1;
+}
+
+.carousel__hidden {
+    display: none;
+}
