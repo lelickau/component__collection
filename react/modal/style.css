@@ -1,0 +1,16 @@
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.open-btn {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(60, 167, 209);
+    color: aliceblue;
+    font-weight: 700;
+    padding: 20px 35px;
+}
